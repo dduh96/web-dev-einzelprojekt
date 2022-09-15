@@ -30,11 +30,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Britney 4eva',
+      filename: 'index.html',
       template: path.resolve(__dirname, './src/index.html'),
     }),
     new HtmlWebpackPlugin({
       title: 'Britney 4eva',
-      filename: './src/pages/join-page.html',
+      filename: 'pages/join-page.html',
       template: path.resolve(__dirname, './src/pages/join-page.html'),
     }),
     new ESLintPlugin(),

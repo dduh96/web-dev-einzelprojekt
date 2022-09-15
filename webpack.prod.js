@@ -33,7 +33,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Britney 4eva',
-      filename: './src/pages/join-page.html',
+      filename: 'pages/join-page.html',
       template: path.resolve(__dirname, './src/pages/join-page.html'),
     }),
   ],
