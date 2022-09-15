@@ -9,7 +9,7 @@ module.exports = {
   // If the src/index.js file imports other JS files,
   // bundle them as well
 
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/index.ts'),
   // 2
   // The bundles source code files shall result in a bundle.js file
   // in the /dist folder
@@ -28,8 +28,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Basic Webpack Setup',
+      title: 'Britney 4eva',
       template: path.resolve(__dirname, './src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Britney 4eva',
+      filename: './src/pages/join-page.html',
+      template: path.resolve(__dirname, './src/pages/join-page.html'),
     }),
   ],
   // 5
@@ -55,6 +60,10 @@ module.exports = {
         test: /\.tsx?/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },

@@ -1,5 +1,8 @@
 import './styles/style.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// @ts-ignore
 import { printMessage } from './scripts/test.ts';
+import 'bootstrap';
 
 const user = 'susan';
 console.log(`hello ${user}, welcome to your npm project!`);

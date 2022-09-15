@@ -1,5 +1,38 @@
-$body-color: red;
+$body-text-color: #FF4775;
+$background-color: #BFBFBF;
+$border-color: #DFDFDF;
+$accent-color: #FFDD00;
+
 
 body {
-  color: $body-color;
+  background-image: url("../assets/britney-bg.jpg");
+  padding-top: 4em;
+}
+
+.sidenav {
+  padding: 0 !important;
+}
+
+.container-main{
+  border-style: outset;
+  border-width: 0.5em;
+  height: 100vh;
+  padding: 2em;
+  color: $body-text-color;
+  background-color: $background-color;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.btn-outset{
+
+  background-color: $background-color;
+  height: 3em;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.border-outset{
+  border-style: outset;
+  border-width: 0.3em;
+  border-color: $border-color;
 }
