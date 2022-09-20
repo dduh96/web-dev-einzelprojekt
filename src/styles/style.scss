@@ -1,12 +1,14 @@
 $body-text-color: #FF4775;
 $background-color: #BFBFBF;
 $border-color: #DFDFDF;
-$accent-color: #FFDD00;
+$accent-color: #7CAE7A;
 
 
 body {
   background-image: url("../assets/britney-bg.jpg");
   padding-top: 4em;
+  padding-bottom: 4em;
+  overflow-x: clip;
 }
 
 .sidenav {
@@ -14,8 +16,6 @@ body {
 }
 
 .container-main{
-  border-style: outset;
-  border-width: 0.5em;
   height: 100vh;
   padding: 2em;
   color: $body-text-color;
@@ -23,16 +23,42 @@ body {
   font-family: "Comic Sans MS", sans-serif;
 }
 
-.btn-outset{
-
-  background-color: $background-color;
+.btn-secondary{
+  border-radius: 0 !important;
+  border-style: outset !important;
+  border-width: 0.3em !important;
   height: 3em;
   margin-top: 1em;
+}
+
+.btn-nav {
+  background-color: $background-color;
   width: 100%;
+  margin-top: 1em;
+  height: 3em;
 }
 
 .border-outset{
   border-style: outset;
   border-width: 0.3em;
   border-color: $border-color;
+}
+
+.form-group {
+  margin-top: 2em !important;
+}
+
+.center-container-without-content {
+  width: 70%;
+  margin: 0 auto !important;
+}
+
+.pull-right{
+  float: right;
+}
+
+.special-text{
+  font-family: "fantasy", sans-serif;
+  color: $accent-color;
+  text-outline: black 0.5em;
 }

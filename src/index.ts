@@ -9,3 +9,10 @@ console.log(`hello ${user}, welcome to your npm project!`);
 
 printMessage(user);
 printMessage(['susan', 'eric', 'john']);
+
+const form = document.getElementById('join-form');
+
+form.addEventListener('submit', (event) => {
+    console.log('IN SUBMIT');
+    console.log(event);
+});

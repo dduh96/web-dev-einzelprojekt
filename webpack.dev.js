@@ -10,13 +10,17 @@ module.exports = {
   // If the src/index.js file imports other JS files,
   // bundle them as well
 
-  entry: path.resolve(__dirname, './src/index.ts'),
+  entry: {
+    index: path.resolve(__dirname, './src/index.ts'),
+    join: path.resolve(__dirname, './src/scripts/join-page.ts'),
+    api: path.resolve(__dirname, './src/scripts/api.ts'),
+  },
   // 2
   // The bundles source code files shall result in a bundle.js file
   // in the /dist folder
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   // 3
   // The /dist folder will be used to serve our application
@@ -37,6 +41,11 @@ module.exports = {
       title: 'Britney 4eva',
       filename: 'pages/join-page.html',
       template: path.resolve(__dirname, './src/pages/join-page.html'),
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Britney 4eva',
+      filename: 'pages/api.html',
+      template: path.resolve(__dirname, './src/pages/api.html'),
     }),
     new ESLintPlugin(),
   ],
