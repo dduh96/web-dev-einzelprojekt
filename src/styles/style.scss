@@ -58,6 +58,12 @@ body {
   float: right;
 }
 
+.center {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .special-text{
   font-family: "fantasy", sans-serif;
   color: $accent-color;
