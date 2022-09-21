@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackObfuscator = require('webpack-obfuscator');
 
 module.exports = {
   mode: 'production',
@@ -45,6 +46,7 @@ module.exports = {
       filename: 'pages/api.html',
       template: path.resolve(__dirname, './src/pages/api.html'),
     }),
+    new WebpackObfuscator({ stringArrayRotate: true, }),
   ],
   // 5
   // Integrate Babel in the build process
