@@ -1,0 +1,1 @@
+(()=>{var e=document.getElementById("join-form");e.addEventListener("submit",(function(t){t.preventDefault();var n=e.elements.username.value,a=document.getElementById("div-join-form"),c=document.createElement("h3");c.innerText="Welcome to the club, ".concat(n,"!"),c.classList.add("special-text","text-center"),a.appendChild(c)}))})();

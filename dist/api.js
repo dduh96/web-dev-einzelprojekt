@@ -1,0 +1,1 @@
+document.getElementById("btn-generate").onclick=function(){var e=new XMLHttpRequest;e.onload=function(){var e=document.createElement("h2");e.innerText=this.responseText,e.classList.add("text-center");var t=document.getElementById("div-quote");t.childElementCount>=3&&(t.innerHTML=""),t.append(e)},e.open("GET","https://api.britney.rest/?format=text"),e.send()};
