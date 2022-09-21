@@ -13,7 +13,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
-permissions: write-all
+permissions: 
+  contents: read
+  pages: write
+  deployments: write
+  id-token: write
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -42,6 +46,13 @@ jobs:
         with:
          path: dist/
          
+  deploy:       
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v1.2.0
  
